@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eaude Furniture — The Essence of Modern Living</title>
+    <style>
+        /* CSS for Eaude Furniture */
+
+        :root {
+            --deep-charcoal: #333333;
+            --cloud-white: #F8F9FA;
+            --soft-bronze: #C0A080;
+            --ash-gray: #B0BEC5;
+            --midnight-navy: #263238;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Sleek, modern font */
+            margin: 0;
+            padding: 0;
+            background-color: var(--cloud-white);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: var(--deep-charcoal);
+            color: var(--cloud-white);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--cloud-white);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2.5rem;
+        }
+
+        nav ul li a {
+            color: var(--cloud-white);
+            text-decoration: none;
+            font-weight: 300; /* Thin font */
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--soft-bronze);
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            overflow: hidden;
+            background-color: var(--midnight-navy); /* Fallback */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            filter: brightness(0.7); /* Subtle darkening for text readability */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: var(--cloud-white);
+            padding: 2rem;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 200; /* Ultra-thin */
+            letter-spacing: 3px;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .hero-buttons a {
+            display: inline-block;
+            background-color: var(--soft-bronze);
+            color: var(--deep-charcoal);
+            padding: 1rem 2.5rem;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .hero-buttons a:hover {
+            background-color: #d4b494; /* Slightly lighter bronze */
+            transform: translateY(-2px);
+        }
+
+        .section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section.dark-bg {
+            background-color: var(--midnight-navy);
+            color: var(--cloud-white);
+        }
+
+        .section h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--deep-charcoal);
+            font-weight: 300;
+            position: relative;
+        }
+
+        .section h2.light-text {
+            color: var(--cloud-white);
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--soft-bronze);
+            margin: 1rem auto 0;
+        }
+
+        .text-content {
+            text-align: justify;
+            font-size: 1.1rem;
+            color: var(--deep-charcoal);
+        }
+
+        .text-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-content.light-text p {
+            color: var(--ash-gray);
+        }
+
+
+        .furniture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .furniture-item {
+            background-color: var(--cloud-white);
+            border: 1px solid var(--ash-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .furniture-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .furniture-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 1px solid var(--ash-gray);
+        }
+
+        .furniture-item-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .furniture-item-info h3 {
+            font-size: 1.6rem;
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+            color: var(--deep-charcoal);
+            font-weight: 400;
+        }
+
+        .furniture-item-info p {
+            font-size: 1rem;
+            color: var(--ash-gray);
+            margin-bottom: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--deep-charcoal);
+            color: var(--cloud-white);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--midnight-navy);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-box {
+            background-color: var(--cloud-white);
+            border: 1px solid var(--ash-gray);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .feature-box h3 {
+            font-size: 1.8rem;
+            color: var(--deep-charcoal);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .feature-box p {
+            color: var(--ash-gray);
+            font-size: 1.05rem;
+        }
+
+        .interactive-extras-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .interactive-card {
+            background-color: var(--midnight-navy);
+            color: var(--cloud-white);
+            border-radius: 8px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .interactive-card:hover {
+            transform: translateY(-5px);
+            background-color: #3b454f; /* Slightly lighter navy */
+        }
+
+        .interactive-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            color: var(--soft-bronze);
+        }
+
+        .interactive-card p {
+            font-size: 1.05rem;
+            color: var(--ash-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .interactive-card .cta-button {
+            background-color: var(--soft-bronze);
+            color: var(--deep-charcoal);
+        }
+
+        .interactive-card .cta-button:hover {
+            background-color: #d4b494;
+        }
+
+        .why-eaude-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .why-eaude-list li {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 30px;
+            color: var(--deep-charcoal);
+        }
+
+        .why-eaude-list li::before {
+            content: '✔';
+            color: var(--soft-bronze);
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            top: -2px;
+        }
+
+        footer {
+            background-color: var(--deep-charcoal);
+            color: var(--cloud-white);
+            padding: 3rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        footer .footer-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-nav ul li {
+            margin: 0 1rem;
+        }
+
+        footer .footer-nav ul li a {
+            color: var(--ash-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-nav ul li a:hover {
+            color: var(--soft-bronze);
+        }
+
+        footer p {
+            margin-bottom: 0.8rem;
+            color: var(--ash-gray);
+        }
+
+        .disclaimer-section, .customer-satisfaction-section {
+            padding: 3rem 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: justify;
+            font-size: 0.95rem;
+            color: var(--deep-charcoal);
+            background-color: var(--cloud-white);
+            border-top: 1px solid var(--ash-gray);
+        }
+
+        .disclaimer-section h2, .customer-satisfaction-section h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--deep-charcoal);
+            font-weight: 300;
+        }
+        .disclaimer-section h2::after, .customer-satisfaction-section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background-color: var(--soft-bronze);
+            margin: 0.8rem auto 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 5%;
+            }
+
+            header .logo {
+                margin-bottom: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.4rem;
+            }
+
+            .hero-buttons a {
+                margin: 0.5rem 0.5rem;
+                padding: 0.8rem 1.8rem;
+            }
+
+            .section {
+                padding: 3rem 5%;
+            }
+
+            .section h2 {
+                font-size: 2.2rem;
+            }
+
+            .furniture-grid, .features-grid, .interactive-extras-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Eaude Furniture</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Eaude Furniture</h1>
+                <p class="tagline">The Essence of Modern Living.</p>
+                <div class="hero-buttons">
+                    <a href="#collections">Shop Collections</a>
+                    <a href="#bespoke-services">Custom Projects</a>
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section id="features" class="section">
+            <h2>Why Eaude Furniture Stands Out</h2>
+            <ul class="why-eaude-list">
+                <li>**Ultra-modern, minimalist aesthetic:** Our designs embody clean lines and understated elegance, bringing a sense of calm and sophistication to any space. We believe in less is more, where every element serves a purpose and contributes to the overall harmony of the design. This philosophy allows our furniture to seamlessly integrate into various modern interior styles, from industrial lofts to sleek urban apartments, creating an atmosphere of refined simplicity.</li>
+                <li>**Premium materials with customizable options:** We meticulously select only the finest metals, lustrous glass, sustainably sourced woods, and luxurious textiles. Our commitment to quality ensures not only the durability and longevity of our pieces but also a tactile experience that speaks of true craftsmanship. Furthermore, we offer extensive customization options, allowing you to choose finishes, colors, and dimensions that perfectly align with your vision and existing decor, ensuring a truly personalized piece of furniture.</li>
+                <li>**Perfect for luxury homes, architects, and interior designers:** Eaude Furniture is the preferred choice for those who appreciate impeccable design and superior quality. Our pieces are specifically curated to complement high-end residential projects, offering architects and interior designers a versatile palette of sophisticated elements to bring their conceptual designs to life. We understand the discerning tastes of our clientele and strive to exceed their expectations with every collection.</li>
+                <li>**Focused on elegance, functionality, and timeless design:** Our core principle revolves around creating furniture that is not only visually stunning but also highly functional and built to endure. We eschew fleeting trends in favor of timeless designs that will remain relevant and beautiful for decades. Each piece is thoughtfully engineered to optimize space, enhance usability, and provide comfort, proving that true elegance never compromises on practicality.</li>
+                <li>**Distinct from rustic, casual, or traditional furniture brands:** Eaude Furniture carves its unique niche by deliberately moving away from rustic, overly casual, or traditional aesthetics. Our brand identity is firmly rooted in the contemporary, offering a refreshing alternative for those seeking modern sophistication. We cater to individuals and professionals who envision spaces that reflect forward-thinking design and a commitment to a refined, uncluttered lifestyle.</li>
+            </ul>
+        </section>
+
+        ---
+
+        <section id="collections" class="section dark-bg">
+            <h2 class="light-text">Furniture Collections</h2>
+            <div class="text-content light-text">
+                <p>Welcome to the curated world of Eaude Furniture collections, where every piece is a testament to the seamless blend of modern minimalist design, premium materials, and unparalleled craftsmanship. Our collections are thoughtfully designed to elevate every corner of your luxury apartment, sophisticated office space, or stylish home. We believe that furniture should not merely fill a space, but rather enhance it, creating an environment that reflects refined taste and a dedication to functional elegance.</p>
+
+                <p>Our commitment to clean lines and subtle European aesthetics is evident in each collection, ensuring that every sofa, table, bed, and desk harmonizes effortlessly with contemporary interiors. We utilize a meticulously selected palette of sleek, premium materials, including the cool resilience of metals, the transparent beauty of glass, the warmth and character of various woods, and the inviting textures of high-quality textiles. This careful material selection not only ensures durability and longevity but also contributes to the luxurious tactile experience that defines Eaude Furniture.</p>
+
+            </div>
+
+            <div class="furniture-grid">
+                <div class="furniture-item">
+                    <img src="p1.avif" alt="Modern Sofa">
+                    <div class="furniture-item-info">
+                        <h3>Living Room: Serene Sofa</h3>
+                        <p>Plush comfort meets minimalist design. Perfect for sophisticated lounging.</p>
+                        <a href="#" class="cta-button">View Collection</a>
+                    </div>
+                </div>
+                <div class="furniture-item">
+                    <img src="p2.avif" alt="Sleek Coffee Table">
+                    <div class="furniture-item-info">
+                        <h3>Living Room: Aura Coffee Table</h3>
+                        <p>Glass and metal interplay for a striking focal point.</p>
+                        <a href="#" class="cta-button">View Collection</a>
+                    </div>
+                </div>
+                <div class="furniture-item">
+                    <img src="p3.webp" alt="Minimalist Bed">
+                    <div class="furniture-item-info">
+                        <h3>Bedroom: Horizon Bed Frame</h3>
+                        <p>Clean lines and luxurious upholstery for peaceful nights.</p>
+                        <a href="#" class="cta-button">View Collection</a>
+                    </div>
+                </div>
+                <div class="furniture-item">
+                    <img src="p4.avif" alt="Modern Office Desk">
+                    <div class="furniture-item-info">
+                        <h3>Office: Apex Executive Desk</h3>
+                        <p>Spacious and elegant, designed for ultimate productivity.</p>
+                        <a href="#" class="cta-button">View Collection</a>
+                    </div>
+                </div>
+                <div class="furniture-item">
+                    <img src="p5.avif" alt="Stylish Dining Table">
+                    <div class="furniture-item-info">
+                        <h3>Dining: Element Dining Table</h3>
+                        <p>A masterpiece of wood and metal, perfect for memorable gatherings.</p>
+                        <a href="#" class="cta-button">View Collection</a>
+                    </div>
+                </div>
+                <div class="furniture-item">
+                    <img src="p6.webp" alt="Accent Side Table">
+                    <div class="furniture-item-info">
+                        <h3>Bedroom: Luminous Side Table</h3>
+                        <p>Compact and chic, adding a touch of bronze elegance.</p>
+                        <a href="#" class="cta-button">View Collection</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        ---
+
+        <section id="bespoke-services" class="section">
+            <h2>Bespoke Services</h2>
+            <div class="text-content">
+                <p>At Eaude Furniture, we understand that true luxury lies in personalization. Our Bespoke Services are designed for individuals and professionals who seek furniture that transcends off-the-shelf solutions, offering truly unique pieces tailored to their specific vision and spatial requirements. This is where your design dreams meet our unparalleled craftsmanship, resulting in furniture that is not just functional, but an extension of your personal aesthetic.</p>
+
+                <p>Our bespoke journey begins with a comprehensive **custom design consultation**. This initial phase is crucial, as it allows us to delve deep into your project's nuances. Our experienced design consultants will engage with you to understand your lifestyle, functional needs, preferred aesthetics, existing decor, and the architectural context of your space. We encourage you to share mood boards, floor plans, and any inspirational images you may have. This collaborative approach ensures that the final design truly resonates with your unique style and seamlessly integrates into your environment.</p>
+
+                <p>Following the consultation, we guide you through an extensive **material, size, and finish selection** process. This is where the magic of customization truly comes alive. You will have the opportunity to explore our premium range of materials, including various grades and finishes of metals like brushed steel, polished chrome, and soft bronze; a spectrum of glass types from clear to frosted, and tinted; a wide array of sustainably sourced woods such as rich walnut, light oak, and deep wenge, each with its unique grain and character; and a curated selection of luxurious textiles, including fine leathers, velvets, and high-performance fabrics, available in an array of sophisticated colors and textures. Our experts will provide insights into the properties and aesthetic qualities of each option, helping you make informed decisions that align with both your design vision and practical considerations.</p>
+
+                <p>We specialize in providing **tailored solutions for both residential and corporate projects**. For residential clients, our bespoke services can range from creating a single, statement furniture piece—like a custom-sized dining table for an expansive living area or a uniquely designed storage unit for a challenging space—to furnishing an entire luxury apartment or home, ensuring every element is cohesive and custom-fitted. For our corporate clients, including architects and interior designers working on commercial spaces, hotels, or high-end offices, we offer the capability to design and produce custom furniture that reflects the brand identity, optimizes workflow, and creates an inspiring environment for employees and clients alike. We understand the stringent demands of commercial projects, including durability, functionality, and compliance with various standards, and our team is adept at delivering solutions that meet these requirements without compromising on design integrity.</p>
+
+                <p>Throughout the entire bespoke process, from initial sketch to final installation, our commitment to craftsmanship and attention to detail remains unwavering. We utilize advanced design software to provide detailed renderings and technical drawings, allowing you to visualize your custom piece before production begins. Our skilled artisans, leveraging years of expertise and state-of-the-art manufacturing techniques, then bring these designs to life with precision and passion. The result is a piece of Eaude Furniture that is not only exquisitely beautiful and perfectly suited to your needs but also embodies the highest standards of quality and design excellence. Choose Eaude's Bespoke Services to transform your space with furniture that is truly yours.</p>
+            </div>
+        </section>
+
+        ---
+
+        <section id="our-story" class="section dark-bg">
+            <h2 class="light-text">Our Story & Philosophy</h2>
+            <div class="text-content light-text">
+                <p>Eaude Furniture was founded on a singular vision: to bring the essence of modern living to discerning individuals through furniture that embodies clean lines, refined materials, and sophisticated design. Our journey began with a deep appreciation for the timeless principles of elegance and simplicity, particularly those found in the rich tapestry of European design heritage. It is this heritage that serves as the cornerstone of our brand, inspiring us to create pieces that transcend fleeting trends and offer enduring beauty.</p>
+
+                <p>Our philosophy is deeply **inspired by European design heritage**, where functionality is seamlessly integrated with artistry. We draw from the mid-century modern movement's emphasis on organic forms and practical design, the Bauhaus school's dedication to form following function, and the minimalist sensibilities of contemporary Scandinavian aesthetics. This blend allows us to craft furniture that is both understated and impactful, pieces that speak volumes through their simplicity and meticulous execution. We believe that true design elegance is not about excessive ornamentation, but about the thoughtful refinement of essential forms and the harmonious interplay of materials.</p>
+
+                <p>At the heart of Eaude Furniture lies an unwavering **commitment to craftsmanship, quality, and sustainability**. We view furniture making as an art form, where every cut, weld, stitch, and finish is executed with precision and passion. Our artisans are masters of their craft, bringing years of experience and dedication to each piece. We meticulously select only the finest materials—from ethically sourced solid woods that exhibit natural beauty, to resilient metals engineered for durability, and luxurious textiles chosen for their tactile appeal and longevity. Our dedication to quality extends to every detail, ensuring that each piece of Eaude Furniture is built to last for generations, resisting the wear and tear of daily life while retaining its inherent beauty.</p>
+
+                <p>Furthermore, sustainability is not just a buzzword for us; it's an integral part of our operational ethos. We strive to minimize our environmental footprint by sourcing materials responsibly, prioritizing those with recycled content or from renewable sources. Our manufacturing processes are designed to be as efficient as possible, reducing waste and energy consumption. We believe that true luxury should not come at the expense of our planet, and we are committed to building a brand that is both beautiful and responsible.</p>
+
+                <p>Our designs are a delicate **balance of minimalism and warmth**. While we embrace the clean, uncluttered aesthetic of minimalism, we infuse our pieces with an inviting warmth that transforms a house into a home. This is achieved through the careful selection of natural materials that age gracefully, the integration of soft textures, and the thoughtful use of color palettes that evoke comfort and serenity. We believe that a minimalist space should feel welcoming and livable, not stark or cold. Our furniture aims to create environments that foster tranquility, encourage connection, and inspire a sense of well-being.</p>
+
+                <p>Eaude Furniture is more than just a brand; it's a lifestyle choice. It's for those who appreciate understated luxury, enduring quality, and designs that stand the test of time. We are dedicated to creating furniture that not only serves its purpose but also elevates the everyday experience, enriching your spaces with beauty, comfort, and a profound sense of modern elegance. Join us in embracing the essence of modern living.</p>
+            </div>
+        </section>
+
+        ---
+
+        <section id="online-shop" class="section">
+            <h2>Seamless Online Shop</h2>
+            <div class="text-content">
+                <p>The Eaude Furniture online shop is designed to be as elegant and user-friendly as our furniture itself, providing a seamless and intuitive Browse experience that brings our meticulously crafted collections directly to your fingertips. We understand that selecting the perfect furniture piece is a significant decision, and our digital platform is engineered to support you every step of the way, offering comprehensive information and immersive visuals.</p>
+
+                <p>Our robust **product filters** are a cornerstone of our online shop, allowing you to efficiently navigate our extensive catalog. You can effortlessly refine your search by **material** (e.g., metals, glass, wood, textiles), helping you discover pieces that align with your preferred textures and finishes. Filters by **space** (e.g., Living Room, Bedroom, Office, Dining) ensure you quickly find furniture suited for specific areas of your home or project. Furthermore, our **style** filters enable you to hone in on particular aesthetics within our modern and minimalist range, whether you're looking for something with a more industrial edge, a softer contemporary feel, or a distinctly European flair.</p>
+
+                <p>Each product listing features **detailed images with zoom and 360° views**, ensuring you get an exhaustive visual understanding of every piece. We believe in transparency and showcasing the intricate details of our craftsmanship. High-resolution photography captures the subtle nuances of material textures, the precision of joinery, and the refined contours of each design. The 360° view allows you to explore the furniture from every angle, as if you were physically walking around it in a showroom, giving you confidence in your selection.</p>
+
+                <p>We take pride in our commitment to quality and sustainability, and our product descriptions prominently **highlight material origins and durability**. You'll find information on where our woods are sourced from, the specific grades of metals used, and the properties of our textiles, including their resistance to wear and tear. This transparency empowers you to make informed choices, knowing the provenance and inherent quality of the materials that constitute your Eaude Furniture piece. We believe that understanding the lifecycle and resilience of your furniture is key to appreciating its true value and making a sustainable choice for your home or office.</p>
+
+                <p>Beyond these core features, our online shop is designed with intuitive navigation, clear product categorization, and a streamlined checkout process. We provide comprehensive product specifications, dimensions, and care instructions to ensure you have all the necessary information at hand. Our goal is to replicate the experience of visiting a high-end showroom, but with the convenience and accessibility of an online platform. We are continuously refining our online shop based on user feedback and technological advancements to ensure it remains a premier destination for modern, minimalist furniture. Discover the ease and elegance of shopping for Eaude Furniture from the comfort of your own space.</p>
+            </div>
+        </section>
+
+        ---
+
+        <section id="interactive-extras" class="section dark-bg">
+            <h2 class="light-text">Interactive Extras</h2>
+            <div class="text-content light-text">
+                <p>At Eaude Furniture, we believe in enhancing your furniture selection journey with innovative tools that empower you to visualize and refine your choices with confidence. Our suite of interactive extras is designed to bridge the gap between imagination and reality, allowing you to truly experience our furniture before it graces your space. These tools reflect our commitment to a personalized and engaging customer experience, leveraging technology to bring the essence of modern living closer to you.</p>
+
+                <p>Our cutting-edge **Room Visualizer Tool** allows you to virtually place Eaude pieces in your own space. Simply upload a photo of your room, and with intuitive controls, you can overlay our furniture, adjusting its position, rotation, and even scale to see how it fits. This augmented reality experience provides an invaluable perspective, helping you assess proportions, color harmony, and overall aesthetic impact. Say goodbye to guesswork and confidently envision how a new sofa, dining table, or shelving unit will transform your interior.</p>
+
+                <p>To ensure perfect material and color coordination, our **Material Swatch Selector** is an indispensable resource. This tool enables you to preview finishes, fabrics, and tones, allowing you to compare various options side-by-side. Whether you're deciding between different wood stains, metal finishes, or upholstery colors, our swatch selector provides high-fidelity representations, giving you a realistic sense of the material's texture and sheen. You can even order physical swatches to experience the materials firsthand in your home's lighting conditions.</p>
+
+                <p>For a truly personalized experience, we offer **Design Consultation Booking** to schedule 1:1 virtual sessions with our expert design consultants. Whether you require guidance on selecting pieces that complement your existing decor, need assistance with spatial planning, or are exploring bespoke solutions for a complex project, our consultants are here to provide tailored advice. These virtual sessions allow for in-depth discussions, screen-sharing of ideas, and personalized recommendations, ensuring your furniture choices align perfectly with your vision and functional needs.</p>
+
+                <p>Beyond tools, we invite you to explore our **Lifestyle Journal**, a curated collection of articles dedicated to modern interiors, design trends, and furniture care. This journal is a source of inspiration and practical advice, featuring insights on how to style minimalist spaces, emerging trends in contemporary design, tips for maintaining the longevity and beauty of your Eaude Furniture, and interviews with leading architects and interior designers who incorporate our pieces into their projects. It's a space where we share our passion for design and empower you to create environments that truly embody the essence of modern living.</p>
+
+                <p>These interactive extras are continuously evolving, as we are committed to integrating the latest technologies and insights to enhance your journey with Eaude Furniture. Our aim is to make the process of selecting and integrating high-quality, modern furniture as seamless, enjoyable, and informed as possible. Explore these features and elevate your design process with Eaude.</p>
+            </div>
+        </section>
+
+        ---
+
+        <section class="disclaimer-section">
+            <h2>Disclaimer</h2>
+            <div class="text-content">
+                <p>Welcome to Eaude Furniture. We strive to provide accurate, up-to-date, and comprehensive information regarding our products, services, and policies on this website. However, please be aware that the information presented here is for general informational purposes only and is subject to change without prior notice. While we endeavor to ensure the accuracy of all content, including product descriptions, specifications, pricing, and availability, errors or omissions may occur. Eaude Furniture reserves the right to correct any such errors, inaccuracies, or omissions at any time without prior notice. We encourage you to contact our customer service team or a design consultant for the most current and precise information regarding any product or service.</p>
+
+                <p>Product images on this website are for illustrative purposes only. While we make every effort to display the colors, textures, and finishes of our furniture as accurately as possible, variations may occur due to individual monitor settings, lighting conditions during photography, and the inherent natural variations in materials such as wood, leather, and stone. Actual products may therefore differ slightly in appearance from the images presented online. We recommend utilizing our Material Swatch Selector or scheduling a design consultation for a more precise understanding of material characteristics. Eaude Furniture shall not be held responsible for any discrepancies between the product images and the actual product.</p>
+
+                <p>All content on this website, including text, graphics, logos, images, audio clips, digital downloads, and data compilations, is the property of Eaude Furniture or its content suppliers and is protected by international copyright and intellectual property laws. Unauthorized use, reproduction, distribution, or modification of any content on this site is strictly prohibited. The trademarks, service marks, and trade names used on this site are proprietary to Eaude Furniture and may not be used in connection with any product or service that is not Eaude Furniture’s, or in any manner that is likely to cause confusion among customers, or in any manner that disparages or discredits Eaude Furniture.</p>
+
+                <p>Eaude Furniture explicitly disclaims all warranties, express or implied, regarding the use or the results of the use of this website in terms of its correctness, accuracy, reliability, or otherwise. Eaude Furniture shall not be liable for any damages of any kind arising from the use of this website, including, but not limited to, direct, indirect, incidental, punitive, and consequential damages. This includes damages for loss of profits, data, or other intangible losses, even if Eaude Furniture has been advised of the possibility of such damages. Your use of this website is at your sole risk.</p>
+
+                <p>Links to third-party websites may be provided on this site for your convenience. Eaude Furniture does not endorse or make any representations about these third-party sites, nor is it responsible for their content, accuracy, or privacy practices. Accessing any third-party websites linked to this site is done entirely at your own risk. We encourage you to review the terms and conditions and privacy policies of any third-party websites you visit.</p>
+
+            </div>
+        </section>
+
+        ---
+
+        <section class="customer-satisfaction-section">
+            <h2>Customer Satisfaction at Eaude Furniture</h2>
+            <div class="text-content">
+                <p>At Eaude Furniture, your satisfaction is not just a goal; it is the cornerstone of our philosophy and the driving force behind everything we do. We are deeply committed to providing an unparalleled experience, from the moment you discover our collections to the lasting enjoyment of your Eaude piece in your home or office. Our dedication to excellence extends beyond the refined design and superior quality of our furniture; it encompasses every interaction, every service, and every detail of your journey with us.</p>
+
+                <p>We believe that true customer satisfaction stems from a blend of exceptional products and outstanding service. Our team is passionate about modern design and committed to understanding your unique needs. From the moment you browse our website or consult with our design experts, you will experience a level of personalized attention designed to make your selection process enjoyable and informed. We pride ourselves on clear communication, transparent policies, and responsive support, ensuring that all your queries are addressed promptly and effectively.</p>
+
+                <p>The quality of our furniture is a direct reflection of our commitment to your satisfaction. Each Eaude piece undergoes rigorous quality control checks at every stage of its creation, from the selection of raw materials to the final finishing touches. Our skilled artisans employ traditional techniques alongside modern precision manufacturing to ensure durability, structural integrity, and aesthetic perfection. We stand behind the craftsmanship of our products, offering warranties that provide peace of mind and demonstrate our confidence in their lasting quality.</p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="cookies.html">Cookie Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2025 Eaude Furniture. All rights reserved.</p>
+        <p><strong>Address:</strong> 123 Modern Living Avenue, Design District, New Delhi, Delhi, India</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> info@eaudefurniture.com</p>
+    </footer>
+</body>
+</html>

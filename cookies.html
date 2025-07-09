@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy - Eaude Furniture</title>
+    <style>
+        /* CSS for Eaude Furniture - Replicated for consistency */
+
+        :root {
+            --deep-charcoal: #333333;
+            --cloud-white: #F8F9FA;
+            --soft-bronze: #C0A080;
+            --ash-gray: #B0BEC5;
+            --midnight-navy: #263238;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Sleek, modern font */
+            margin: 0;
+            padding: 0;
+            background-color: var(--cloud-white);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: var(--deep-charcoal);
+            color: var(--cloud-white);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--cloud-white);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2.5rem;
+        }
+
+        nav ul li a {
+            color: var(--cloud-white);
+            text-decoration: none;
+            font-weight: 300; /* Thin font */
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--soft-bronze);
+        }
+
+        .section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section.dark-bg {
+            background-color: var(--midnight-navy);
+            color: var(--cloud-white);
+        }
+
+        .section h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--deep-charcoal);
+            font-weight: 200;
+            position: relative;
+        }
+        .section h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--soft-bronze);
+            margin: 1rem auto 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            color: var(--deep-charcoal);
+            font-weight: 300;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--soft-bronze);
+            margin: 1rem auto 0;
+        }
+
+        .section h3 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: var(--midnight-navy);
+            font-weight: 400;
+        }
+
+        .text-content {
+            text-align: justify;
+            font-size: 1.1rem;
+            color: var(--deep-charcoal);
+        }
+
+        .text-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-content ul {
+            list-style: disc;
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .text-content ol {
+            list-style: decimal;
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Cookie Consent Dialogue Box */
+        .cookie-consent-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--deep-charcoal);
+            color: var(--cloud-white);
+            padding: 1.5rem 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cookie-consent-banner p {
+            margin: 0 0 1rem 0;
+            text-align: center;
+            font-size: 1rem;
+            color: var(--ash-gray);
+        }
+
+        .cookie-consent-banner .buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cookie-consent-banner button {
+            background-color: var(--soft-bronze);
+            color: var(--deep-charcoal);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cookie-consent-banner button:hover {
+            background-color: #d4b494; /* Slightly lighter bronze */
+            transform: translateY(-2px);
+        }
+
+        .cookie-consent-banner button.decline {
+            background-color: var(--ash-gray);
+            color: var(--deep-charcoal);
+        }
+
+        .cookie-consent-banner button.decline:hover {
+            background-color: #9da8b1; /* Slightly darker ash gray */
+        }
+
+        footer {
+            background-color: var(--deep-charcoal);
+            color: var(--cloud-white);
+            padding: 3rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        footer .footer-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-nav ul li {
+            margin: 0 1rem;
+        }
+
+        footer .footer-nav ul li a {
+            color: var(--ash-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-nav ul li a:hover {
+            color: var(--soft-bronze);
+        }
+
+        footer p {
+            margin-bottom: 0.8rem;
+            color: var(--ash-gray);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 5%;
+            }
+
+            header .logo {
+                margin-bottom: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .section {
+                padding: 3rem 5%;
+            }
+
+            .section h1 {
+                font-size: 2.8rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .section h3 {
+                font-size: 1.5rem;
+            }
+
+            .cookie-consent-banner {
+                padding: 1rem 3%;
+            }
+
+            .cookie-consent-banner .buttons {
+                flex-direction: column;
+                gap: 0.8rem;
+                width: 100%;
+            }
+
+            .cookie-consent-banner button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Eaude Furniture</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h1>Cookie Policy</h1>
+            <div class="text-content">
+                <p><strong>Last Updated: July 7, 2025</strong></p>
+                <p>Welcome to Eaude Furniture's comprehensive Cookie Policy. This document explains how Eaude Furniture ("we," "our," or "us") uses cookies and similar technologies on our website, <a href="index.html">eaudefurniture.com</a>, and the choices you have regarding their use. We are committed to transparency and providing you with clear information about how your data is collected and utilized to enhance your browsing experience, personalize our services, and ensure the security of our platform. By continuing to use our website, you consent to the use of cookies in accordance with this policy, unless you have adjusted your browser settings to disable them. We encourage you to read this policy in conjunction with our <a href="privacy.html">Privacy Policy</a> for a complete understanding of our data practices.</p>
+
+                <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide reporting information and to remember your preferences. Cookies enable us to recognize your device and store certain information about your past actions or preferences. This allows us to offer a more tailored and efficient browsing experience, remembering items in your shopping cart, login details, and site preferences. Our use of cookies is designed to optimize functionality and provide relevant content, ensuring that your interaction with Eaude Furniture is as seamless and enjoyable as possible.</p>
+
+                <h2>Understanding Our Cookie Practices: 40 Key Aspects of Data Control and User Interaction</h2>
+                <p>This section provides an in-depth look at various aspects of our cookie usage, your data control, and how you can interact with us regarding these practices. Each point offers detailed explanations to ensure a thorough understanding of our commitment to your privacy.</p>
+
+                <h3>1. What are Cookies and Why Do We Use Them?</h3>
+                <p>Cookies are small pieces of data, typically text files, stored on your device (computer, tablet, smartphone) by your web browser when you visit a website. They serve various purposes, primarily to make websites function more effectively and to provide information to the website owners. At Eaude Furniture, we use cookies to enhance your browsing experience by remembering your preferences, such as language settings or items in your shopping cart. They also help us analyze website traffic, understand user behavior, and personalize content and advertisements. Without cookies, certain functionalities of our website might not work correctly, and your experience could be less efficient. Our use of cookies is always aimed at improving the service we provide to you.</p>
+
+                <h3>2. First-Party vs. Third-Party Cookies Explained</h3>
+                <p>Cookies can be categorized based on who sets them. First-party cookies are set by the website you are visiting (i.e., Eaude Furniture). They are typically used for essential site functionalities like remembering your login status or shopping cart contents. Third-party cookies, on the other hand, are set by domains other than the one you are visiting. These are often used for advertising, analytics, or social media integration. For example, a third-party analytics cookie might track your browsing behavior across multiple sites to provide us with aggregated data about user trends. We carefully select our third-party partners to ensure they adhere to strict data protection standards, safeguarding your privacy even when external cookies are in use.</p>
+
+                <h3>3. Session Cookies vs. Persistent Cookies</h3>
+                <p>Cookies also differ in their duration. Session cookies are temporary and are automatically deleted from your device when you close your web browser. They are crucial for maintaining your session as you navigate through different pages of our website, ensuring, for instance, that your shopping cart remains intact as you browse products. Persistent cookies, however, remain on your device for a set period or until you manually delete them. These cookies are used to remember your preferences or actions across multiple sessions, such as remembering your login details for future visits or recalling your preferred language setting. We use a combination of both to optimize both immediate functionality and long-term user experience.</p>
+
+                <h3>4. Strictly Necessary Cookies: Essential Website Functionality</h3>
+                <p>These cookies are absolutely essential for the website to function correctly and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in, or filling in forms. Without these cookies, services you have asked for, like accessing secure areas of the website or using the shopping cart, cannot be provided. These cookies do not store any personally identifiable information and are crucial for the basic operation of our e-commerce platform. Your consent is not typically required for these cookies as they are fundamental to the service you are requesting.</p>
+
+                <h3>5. Performance Cookies: Enhancing Site Speed and Efficiency</h3>
+                <p>Performance cookies collect information about how visitors use our website, for instance, which pages visitors go to most often, and if they get error messages from web pages. These cookies do not collect information that identifies a visitor. All information these cookies collect is aggregated and therefore anonymous. It is only used to improve how a website works. For example, they help us understand which parts of our website are most popular, allowing us to optimize page loading times and streamline navigation. By analyzing this data, we can continuously refine our website's performance, ensuring a faster and more responsive experience for all our users.</p>
+
+                <h3>6. Functionality Cookies: Remembering Your Preferences</h3>
+                <p>Functionality cookies allow our website to remember choices you make (such as your user name, language, or the region you are in) and provide enhanced, more personal features. For instance, if you customize certain elements of the website, these cookies can remember those settings for your next visit. They can also be used to remember changes you have made to text size, fonts, and other parts of web pages that you can customize. The information these cookies collect may be anonymized and they cannot track your browsing activity on other websites. They are designed to make your experience more convenient and tailored to your individual preferences.</p>
+
+                <h3>7. Targeting/Advertising Cookies: Delivering Relevant Content</h3>
+                <p>These cookies are used to deliver advertisements more relevant to you and your interests. They are also used to limit the number of times you see an advertisement as well as help measure the effectiveness of the advertising campaign. They are usually placed by advertising networks with the website operator’s permission. They remember that you have visited a website and this information is shared with other organizations such as advertisers. Quite often, targeting or advertising cookies will be linked to site functionality provided by the other organization. We use these cookies to present you with Eaude Furniture products and promotions that are most likely to appeal to your design preferences, based on your browsing history on our site and other relevant platforms.</p>
+
+                <h3>8. Analytics Cookies: Understanding User Behavior</h3>
+                <p>Analytics cookies, often provided by third-party services like Google Analytics, help us understand how visitors interact with our website by collecting and reporting information anonymously. They track metrics such as the number of visitors, the pages they visit, the time spent on each page, and the path they take through the site. This data is crucial for us to identify popular content, pinpoint areas for improvement, and optimize our website's structure and content to better serve our users. The insights gained from these cookies are aggregated and do not personally identify you, but they are vital for our continuous website development and user experience enhancement efforts.</p>
+
+                <h3>9. Social Media Cookies: Seamless Sharing and Interaction</h3>
+                <p>These cookies are set by a range of social media services that we have added to the site to enable you to share our content with your friends and networks. They are capable of tracking your browser across other sites and building up a profile of your interests. This may impact the content and messages you see on other websites you visit. If you do not allow these cookies, you may not be able to use or see these sharing tools. For example, if you click a "Like" button on our product page, the social media platform might set a cookie to remember your preference and potentially show you related content on their platform. We use these to enhance our brand visibility and allow for easy content sharing.</p>
+
+                <h3>10. Managing Your Cookie Preferences Through Our Banner</h3>
+                <p>Upon your first visit to our website, you will encounter a cookie consent banner. This banner provides you with the option to accept all cookies, decline non-essential cookies, or customize your preferences. This tool is designed to empower you with control over your data. If you choose to decline, only strictly necessary cookies will be placed on your device. If you accept, all types of cookies will be utilized to provide a full-featured experience. Customization options allow you to select which categories of cookies (e.g., performance, advertising) you wish to enable or disable. Your choice will be remembered for future visits, though you can always change it later.</p>
+
+                <h3>11. Changing Your Cookie Preferences in Your Browser Settings</h3>
+                <p>Beyond our on-site banner, most web browsers allow you to manage your cookie preferences through their settings. You can typically configure your browser to accept all cookies, reject all cookies, or notify you when a cookie is set. You can also delete existing cookies from your browser history. The exact steps vary depending on your browser (e.g., Chrome, Firefox, Safari, Edge). Please note that blocking all cookies, especially strictly necessary ones, may significantly impact the functionality and performance of our website and many other websites you visit. We recommend consulting your browser's help documentation for detailed instructions on managing cookie settings.</p>
+
+                <h3>12. The Role of IP Addresses in Data Collection</h3>
+                <p>An Internet Protocol (IP) address is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication. While not a cookie, your IP address is often collected alongside cookie data. We use IP addresses to analyze trends, administer the site, track users’ movement, and gather broad demographic information for aggregate use. IP addresses are also crucial for security purposes, helping us detect and prevent fraudulent activities or unauthorized access to our systems. In some cases, your IP address may provide approximate geographical location information, which helps us tailor content or services relevant to your region, without identifying your precise location.</p>
+
+                <h3>13. Web Beacons and Pixel Tags: Invisible Tracking Technologies</h3>
+                <p>In addition to cookies, we may use other tracking technologies like web beacons (also known as pixel tags or clear GIFs). These are tiny graphics with a unique identifier, similar in function to cookies, and are used to track the online movements of web users. In contrast to cookies, which are stored on a user's computer hard drive, web beacons are embedded invisibly on web pages or in emails. They help us understand whether emails have been opened, which links are clicked, and the effectiveness of our marketing campaigns. This allows us to optimize our email communications and website content based on user engagement, providing a more relevant experience without storing extensive data on your device.</p>
+
+                <h3>14. Data Security Measures for Cookie-Related Information</h3>
+                <p>The security of data collected through cookies and other tracking technologies is paramount. We implement robust technical and organizational measures to protect this information from unauthorized access, alteration, disclosure, or destruction. This includes using encryption for data in transit, maintaining secure servers, and implementing strict access controls. While no online data transmission can be guaranteed to be 100% secure, we continuously review and update our security protocols to safeguard your information. Our commitment extends to ensuring that any third-party partners who process cookie data on our behalf also adhere to high security standards, protecting your privacy throughout the data lifecycle.</p>
+
+                <h3>15. Data Retention Policies for Cookie-Derived Data</h3>
+                <p>The duration for which we retain data collected via cookies varies depending on the cookie type and its purpose. Session cookies are deleted as soon as you close your browser. Persistent cookies have varying expiration dates, typically ranging from a few hours to several years, depending on their function (e.g., remembering login details versus long-term analytics). Aggregated or anonymized data derived from cookies, which cannot be used to identify you personally, may be retained for longer periods for statistical analysis and business intelligence. We adhere to strict data retention policies, ensuring that data is only kept for as long as necessary to fulfill its intended purpose and comply with legal obligations, after which it is securely deleted or anonymized.</p>
+
+                <h3>16. Your Right to Access Data Collected via Cookies</h3>
+                <p>Under applicable data protection laws, you have the right to request access to the personal data we hold about you, which may include information collected through cookies if it can be directly linked to your identity. This right allows you to verify the accuracy of your data and ensure its lawful processing. To exercise this right, please submit a formal request to our privacy team using the contact details provided in this policy. We will require verification of your identity to protect your privacy and will provide you with a copy of your data in a structured, commonly used, and machine-readable format within the legally mandated timeframe. Our aim is to empower you with full visibility into your data.</p>
+
+                <h3>17. Your Right to Rectify Inaccurate Cookie-Related Data</h3>
+                <p>If you believe that any personal information we hold about you, including data potentially derived from cookie interactions, is inaccurate or incomplete, you have the right to request its rectification. We are committed to maintaining accurate and up-to-date records. Should you identify any discrepancies, please contact us with the details of the correction required. We will promptly investigate your request and, if validated, update your information accordingly. This ensures that the data we use to personalize your experience and provide our services is always precise and reflective of your current details. Your proactive engagement in maintaining data accuracy is highly valued.</p>
+
+                <h3>18. Your Right to Erasure (Right to be Forgotten) Regarding Cookies</h3>
+                <p>In certain circumstances, you have the right to request the deletion or erasure of your personal data, including information collected through cookies, where there is no compelling reason for its continued processing. This right is not absolute and may be subject to legal exceptions, such as when we are required to retain data for legal compliance, tax purposes, or to fulfill ongoing contractual obligations. If you wish to exercise your "right to be forgotten," please contact our privacy team. We will assess your request in accordance with applicable laws and take all reasonable steps to delete your data where legally permissible, ensuring your privacy preferences are respected.</p>
+
+                <h3>19. Your Right to Object to Processing of Cookie Data</h3>
+                <p>You have the right to object to the processing of your personal data, including that collected via cookies, where the processing is based on our legitimate interests or for direct marketing purposes. If you object to processing based on legitimate interests, we will cease processing your data unless we can demonstrate compelling legitimate grounds for the processing that override your interests, rights, and freedoms, or for the establishment, exercise, or defense of legal claims. For direct marketing, you have an absolute right to object, and we will cease processing your data for such purposes immediately upon receiving your objection. To exercise this right, please contact us through the provided channels.</p>
+
+                <h3>20. Your Right to Data Portability for Cookie-Related Information</h3>
+                <p>The right to data portability allows you to obtain and reuse your personal data for your own purposes across different services. This means you can request to receive your personal information, including certain data collected through cookies that is processed by automated means based on your consent or for the performance of a contract, in a structured, commonly used, and machine-readable format. Furthermore, you have the right to transmit that data to another controller without hindrance from us, where technically feasible. This empowers you to have greater control over your data and facilitates its transfer between different service providers, enhancing interoperability and user choice.</p>
+
+                <h3>21. Withdrawing Consent for Cookie Usage</h3>
+                <p>Where our processing of your personal data, particularly through non-essential cookies, is based on your consent, you have the right to withdraw that consent at any time. Withdrawing consent will not affect the lawfulness of processing based on consent before its withdrawal. You can typically withdraw your consent through our cookie consent banner, by adjusting your browser settings, or by contacting our privacy team directly. Please be aware that withdrawing consent for certain cookies may impact the functionality and personalization of our website, potentially limiting your ability to fully utilize all features. We respect your decision and will implement your preferences promptly.</p>
+
+                <h3>22. How to Contact Our Privacy Team Regarding Cookies</h3>
+                <p>For any questions, concerns, or requests related to our Cookie Policy, your data protection rights, or how we handle information collected via cookies, our dedicated Privacy Team is available to assist you. We are committed to ensuring that your privacy is protected and that you have full control over your personal data. You can reach us through the following methods:
+                <br><strong>Email:</strong> privacy@eaudefurniture.com
+                <br><strong>Phone:</strong> +91 98765 43210
+                <br><strong>Postal Address:</strong> Eaude Furniture Privacy Team, 123 Modern Living Avenue, Design District, New Delhi, Delhi, India.
+                <br>We aim to respond to all inquiries within a reasonable timeframe, typically within 30 days, in accordance with applicable data protection regulations. Your detailed communication helps us to address your concerns effectively.</p>
+
+                <h3>23. Contacting Our Data Protection Officer (DPO)</h3>
+                <p>For more complex or specific inquiries regarding data protection and privacy, especially concerning our compliance with GDPR and other regulations, you may wish to contact our designated Data Protection Officer (DPO). The DPO oversees our data protection strategy and ensures our adherence to privacy laws. They serve as a point of contact for supervisory authorities and individuals on all issues relating to the processing of personal data and the exercise of their rights.
+                <br><strong>DPO Email:</strong> dpo@eaudefurniture.com
+                <br>The DPO is committed to upholding the highest standards of data privacy and will provide expert guidance and resolution for your data protection concerns. Please allow for a slightly longer response time for DPO inquiries due to their specialized nature.</p>
+
+                <h3>24. Inquiries Regarding Third-Party Cookies and Their Policies</h3>
+                <p>While we strive to ensure our third-party partners adhere to strict data protection standards, their use of cookies is governed by their own respective privacy and cookie policies. If you have specific questions or concerns about cookies set by third parties on our website (e.g., Google, Facebook, analytics providers), we recommend reviewing their individual policies directly. We can provide general information about the types of third-party cookies we use, but for detailed inquiries about their data practices, it is best to contact them directly. We are happy to provide links to their policies upon request to facilitate your understanding and control over these external cookies.</p>
+
+                <h3>25. How Our Cookie Policy Integrates with Our Privacy Policy</h3>
+                <p>This Cookie Policy should be read in conjunction with our overarching <a href="privacy.html">Privacy Policy</a>. While this document focuses specifically on the use of cookies and similar technologies, our Privacy Policy provides a broader overview of how we collect, use, disclose, and safeguard all types of your personal information. It outlines your comprehensive data protection rights and our general data handling practices. The two policies are designed to complement each other, offering a complete picture of our commitment to your privacy. Understanding both documents will ensure you are fully informed about how Eaude Furniture manages your data across all interactions and platforms.</p>
+
+                <h3>26. Updates to Our Cookie Policy and Notification Procedures</h3>
+                <p>We may update this Cookie Policy from time to time to reflect changes in our cookie practices, legal requirements, or technological advancements. When we make changes, we will revise the "Last Updated" date at the top of this policy. For significant changes that materially affect how we use cookies or your data, we will notify you by posting a prominent notice on our website or by sending you an email, as required by applicable law. We encourage you to review this Cookie Policy periodically to stay informed about how we are using cookies and your choices regarding them. Your continued use of our website after any changes signifies your acceptance of the updated terms.</p>
+
+                <h3>27. The Necessity of Cookies for E-commerce Functionality</h3>
+                <p>For an e-commerce website like Eaude Furniture, certain cookies are absolutely necessary for core functionalities. These include cookies that enable the shopping cart, allow you to log into your account, and ensure secure transactions. Without these essential cookies, you would not be able to browse products, add items to your cart, proceed to checkout, or complete a purchase. They are fundamental to providing the online shopping experience you expect. While you have control over non-essential cookies, disabling these strictly necessary ones would render our e-commerce platform largely unusable for purchasing, as they maintain the state of your interaction with the site.</p>
+
+                <h3>28. Cookie Consent Records and Proof of Consent</h3>
+                <p>To demonstrate our compliance with data protection regulations, we maintain records of your cookie consent choices. When you interact with our cookie consent banner, your preference (accept, decline, customize) and the timestamp of your choice are recorded. This record serves as proof of your consent and allows us to respect your preferences during subsequent visits. These records are securely stored and are accessible only to authorized personnel for audit and compliance purposes. This practice ensures accountability and transparency in our data handling, providing a verifiable log of your consent decisions regarding our use of cookies.</p>
+
+                <h3>29. Opting Out of Targeted Advertising Cookies</h3>
+                <p>You have specific options to opt-out of targeted advertising cookies. While you can manage these through our cookie consent banner or your browser settings, you can also often opt-out directly through industry self-regulatory programs. For example, in Europe, you can visit <a href="http://www.youronlinechoices.eu/" target="_blank">www.youronlinechoices.eu</a>, and in the US, you can visit the Network Advertising Initiative (<a href="http://www.networkadvertising.org/choices/" target="_blank">www.networkadvertising.org/choices/</a>) or the Digital Advertising Alliance (<a href="http://www.aboutads.info/choices/" target="_blank">www.aboutads.info/choices/</a>). These platforms allow you to opt-out of interest-based advertising from participating companies. Opting out does not mean you will no longer see advertisements, but rather that the ads you see may be less relevant to your interests.</p>
+
+                <h3>30. Impact of Declining Cookies on Website Experience</h3>
+                <p>Declining non-essential cookies will impact your website experience. While core functionalities will remain, features that rely on performance, functionality, or targeting cookies will be affected. For instance, the website may not remember your language preferences, you might see less personalized content or advertisements, and our ability to analyze website performance for improvement will be limited. This could lead to a less tailored and potentially slower browsing experience. We encourage you to weigh the benefits of a personalized experience against your privacy preferences when making your cookie choices, and remember that you can always adjust your settings later if your needs change.</p>
+
+                <h3>31. Use of Cookies in Our Bespoke Design Consultation Service</h3>
+                <p>When you engage with our bespoke design consultation service, cookies play a role in streamlining the process. Functionality cookies might remember your past design preferences or details you've entered into forms, making subsequent interactions smoother. Performance cookies help us monitor the efficiency of our consultation booking system, ensuring a seamless user journey. While the primary data collected during consultations is personal information you provide directly (as outlined in our Privacy Policy), cookies facilitate the technical delivery and optimization of this specialized service, ensuring a consistent and personalized experience from initial inquiry to final design approval.</p>
+
+                <h3>32. Cookies and Our Online Shop's Product Recommendations</h3>
+                <p>Our online shop leverages cookies, particularly targeting and analytics cookies, to power its product recommendation engine. By tracking your browsing history, viewed products, and purchase patterns, these cookies help us understand your interests and preferences. This allows us to present you with tailored product suggestions, complementary items, and personalized offers that are highly relevant to your taste in modern furniture. This personalization is designed to enhance your shopping experience, making it easier for you to discover products you'll love. If you decline these cookies, our ability to provide these personalized recommendations will be limited, and you may see more generic product suggestions.</p>
+
+                <h3>33. Cookies for A/B Testing and Website Optimization</h3>
+                <p>We use cookies to conduct A/B testing, a method of comparing two versions of a webpage or app feature against each other to determine which one performs better. For example, we might test two different layouts for a product page to see which one leads to more engagement. Cookies help us ensure that you consistently see the same version of the test during your session, preventing a confusing user experience. The data collected from A/B tests (e.g., click-through rates, time on page) is anonymized and aggregated, providing valuable insights for continuous website optimization and improving the overall user journey without personally identifying you.</p>
+
+                <h3>34. How Cookies Facilitate Our Lifestyle Journal Content</h3>
+                <p>Our Lifestyle Journal, featuring articles on modern interiors and design trends, also benefits from cookie usage. Performance and analytics cookies help us understand which articles are most popular, how long readers spend on a page, and how they navigate through the journal. This data allows us to tailor our content strategy, producing more of the articles and topics that resonate most with our audience. Functionality cookies might remember your reading progress or preferences for future visits. While your engagement with the journal is largely anonymous, cookies ensure that we can continuously refine and enhance the quality and relevance of our editorial content, providing a more engaging experience for design enthusiasts.</p>
+
+                <h3>35. Cookies and Affiliate Marketing Programs</h3>
+                <p>If Eaude Furniture participates in affiliate marketing programs, certain cookies may be used to track referrals. These cookies are typically set by our affiliate partners when you click on an affiliate link that leads to our website. Their purpose is to attribute the sale or lead to the correct affiliate, allowing them to earn a commission. These cookies generally do not collect personal identifying information about you, but rather track the referral source. This mechanism is essential for the functioning of affiliate partnerships and helps us to expand our reach and attract new customers through collaborative marketing efforts. You can usually manage these through your browser settings or industry opt-out tools.</p>
+
+                <h3>36. Browser Fingerprinting vs. Cookies</h3>
+                <p>While cookies are the primary method for tracking, it's important to differentiate them from browser fingerprinting. Browser fingerprinting is a more advanced, cookie-less tracking technique that collects information about your web browser's configuration (e.g., plugins, fonts, screen resolution) to create a unique "fingerprint" of your device. This fingerprint can then be used to identify you across different websites. Eaude Furniture primarily relies on cookies for tracking and personalization as outlined in this policy. While we may use standard analytics tools that collect some browser configuration data, our core tracking mechanisms are cookie-based, providing you with clearer control and transparency over your data.</p>
+
+                <h3>37. The Importance of Regular Cookie Policy Review</h3>
+                <p>We are committed to regularly reviewing and updating our Cookie Policy to ensure it accurately reflects our current data practices, complies with evolving legal requirements (such as GDPR, CCPA, etc.), and incorporates industry best practices. The digital landscape is constantly changing, with new technologies and regulations emerging. Our periodic review process involves assessing our cookie usage, evaluating third-party integrations, and updating our policy language to remain transparent and compliant. We encourage our users to revisit this policy periodically to stay informed about any changes and to understand how their data is being managed in the most current context.</p>
+
+                <h3>38. How to Lodge a Complaint Regarding Cookie Practices</h3>
+                <p>If you have concerns about our cookie practices or believe that your data protection rights related to cookies have been violated, you have the right to lodge a complaint. We encourage you to first contact our Privacy Team or Data Protection Officer directly using the contact details provided in this policy. We are committed to resolving any issues promptly and fairly. If you are not satisfied with our response, you have the right to lodge a complaint with a supervisory authority responsible for data protection in your country of residence (e.g., the Information Commissioner's Office in the UK, or relevant data protection authorities in India or the EU). We will fully cooperate with any such investigations.</p>
+
+                <h3>39. Cookies and Cross-Device Tracking</h3>
+                <p>Some of the cookies and tracking technologies we utilize, particularly those from third-party advertising and analytics partners, may contribute to cross-device tracking. This means that your browsing behavior might be linked across different devices you use (e.g., your desktop computer and your mobile phone). This is typically done through anonymized identifiers or by inferring connections based on shared login information across platforms. The purpose of cross-device tracking is to provide a more consistent and personalized user experience and to deliver more relevant advertising, regardless of the device you are using. You can often manage or limit cross-device tracking through your device settings or by opting out of specific advertising networks as detailed in point 29.</p>
+
+                <h3>40. Our Commitment to User Control and Transparency</h3>
+                <p>At Eaude Furniture, our approach to cookies and data privacy is rooted in a fundamental commitment to user control and transparency. We believe that you should have a clear understanding of what data is collected, why it is collected, and how it is used. This extensive Cookie Policy, along with our Privacy Policy, is designed to provide that clarity. We empower you with tools to manage your cookie preferences, and we are always available to answer your questions and address your concerns. Our goal is to build and maintain your trust by being open about our data practices and ensuring that your experience with Eaude Furniture is not only aesthetically pleasing but also respectful of your privacy rights. We continuously strive to enhance our privacy framework to meet the highest global standards.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="cookieConsentBanner" class="cookie-consent-banner">
+        <p>This website uses cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept All Cookies," you agree to our use of cookies. For more information, please read our <a href="cookies.html" style="color: var(--soft-bronze); text-decoration: underline;">Cookie Policy</a>.</p>
+        <div class="buttons">
+            <button id="acceptCookies">Accept All Cookies</button>
+            <button id="declineCookies" class="decline">Decline Non-Essential</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="cookies.html">Cookie Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2025 Eaude Furniture. All rights reserved.</p>
+        <p><strong>Address:</strong> 123 Modern Living Avenue, Design District, New Delhi, Delhi, India</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> info@eaudefurniture.com</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookieConsentBanner');
+            const acceptButton = document.getElementById('acceptCookies');
+            const declineButton = document.getElementById('declineCookies');
+            const cookieConsent = localStorage.getItem('eaudeCookieConsent');
+
+            // Show banner if no consent has been given
+            if (!cookieConsent) {
+                cookieBanner.style.display = 'flex';
+            } else {
+                cookieBanner.style.display = 'none';
+            }
+
+            acceptButton.addEventListener('click', function() {
+                localStorage.setItem('eaudeCookieConsent', 'accepted');
+                cookieBanner.style.display = 'none';
+                // You would typically set specific cookies here based on acceptance
+                console.log('Cookies accepted.');
+            });
+
+            declineButton.addEventListener('click', function() {
+                localStorage.setItem('eaudeCookieConsent', 'declined');
+                cookieBanner.style.display = 'none';
+                // You would typically disable non-essential cookies here
+                console.log('Non-essential cookies declined.');
+            });
+        });
+    </script>
+</body>
+</html>

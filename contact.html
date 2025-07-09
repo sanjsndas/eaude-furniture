@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Eaude Furniture</title>
+    <style>
+        /* CSS for Eaude Furniture - Replicated for consistency */
+
+        :root {
+            --deep-charcoal: #333333;
+            --cloud-white: #F8F9FA;
+            --soft-bronze: #C0A080;
+            --ash-gray: #B0BEC5;
+            --midnight-navy: #263238;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Sleek, modern font */
+            margin: 0;
+            padding: 0;
+            background-color: var(--cloud-white);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: var(--deep-charcoal);
+            color: var(--cloud-white);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--cloud-white);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2.5rem;
+        }
+
+        nav ul li a {
+            color: var(--cloud-white);
+            text-decoration: none;
+            font-weight: 300; /* Thin font */
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--soft-bronze);
+        }
+
+        .section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section.dark-bg {
+            background-color: var(--midnight-navy);
+            color: var(--cloud-white);
+        }
+
+        .section h1 {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--deep-charcoal);
+            font-weight: 200;
+            position: relative;
+        }
+        .section h1::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--soft-bronze);
+            margin: 1rem auto 0;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            color: var(--deep-charcoal);
+            font-weight: 300;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: var(--soft-bronze);
+            margin: 1rem auto 0;
+        }
+
+        .section h3 {
+            font-size: 1.8rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: var(--midnight-navy);
+            font-weight: 400;
+        }
+
+        .text-content {
+            text-align: justify;
+            font-size: 1.1rem;
+            color: var(--deep-charcoal);
+        }
+
+        .text-content p {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-content ul {
+            list-style: disc;
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .text-content ol {
+            list-style: decimal;
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .contact-card {
+            background-color: var(--cloud-white);
+            border: 1px solid var(--ash-gray);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-card h4 {
+            font-size: 1.5rem;
+            color: var(--midnight-navy);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .contact-card p {
+            font-size: 1rem;
+            color: var(--ash-gray);
+            margin-bottom: 0.8rem;
+        }
+
+        .contact-card a {
+            color: var(--soft-bronze);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: var(--deep-charcoal);
+        }
+
+        footer {
+            background-color: var(--deep-charcoal);
+            color: var(--cloud-white);
+            padding: 3rem 5%;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        footer .footer-nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-nav ul li {
+            margin: 0 1rem;
+        }
+
+        footer .footer-nav ul li a {
+            color: var(--ash-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-nav ul li a:hover {
+            color: var(--soft-bronze);
+        }
+
+        footer p {
+            margin-bottom: 0.8rem;
+            color: var(--ash-gray);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem 5%;
+            }
+
+            header .logo {
+                margin-bottom: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .section {
+                padding: 3rem 5%;
+            }
+
+            .section h1 {
+                font-size: 2.8rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .section h3 {
+                font-size: 1.5rem;
+            }
+
+            .contact-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Eaude Furniture</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+                <li><a href="cookies.html">Cookies</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section">
+            <h1>Contact Us</h1>
+            <div class="text-content">
+                <p>At Eaude Furniture, we believe that exceptional design is complemented by exceptional service. Your inquiries, feedback, and collaborations are invaluable to us, and we are committed to providing prompt, comprehensive, and personalized assistance. Whether you have a question about our modern furniture collections, require support with an existing order, or wish to explore a bespoke design project, our dedicated team is here to help. We strive to make every interaction as seamless and refined as our furniture, ensuring your experience with Eaude Furniture is nothing short of excellent. Please feel free to reach out through any of the channels below; we look forward to connecting with you.</p>
+
+                <h2>General Inquiries</h2>
+                <p>For all general questions about Eaude Furniture, our brand philosophy, or any non-specific inquiries, please use the following contact details. Our administrative team will ensure your message is directed to the most appropriate department for a timely and accurate response. We appreciate your interest in Eaude Furniture and are eager to provide you with the information you need.</p>
+                <div class="contact-info-grid">
+                    <div class="contact-card">
+                        <h4>Email Us</h4>
+                        <p>For written correspondence, detailed questions, or to send attachments.</p>
+                        <p><a href="mailto:info@eaudefurniture.com">info@eaudefurniture.com</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Call Us</h4>
+                        <p>For immediate assistance or to speak directly with a representative.</p>
+                        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Visit Our Office</h4>
+                        <p>Our main administrative office address for correspondence.</p>
+                        <p>123 Modern Living Avenue, Design District, New Delhi, Delhi, India</p>
+                    </div>
+                </div>
+
+                <h2>Customer Support</h2>
+                <p>Our customer support team is dedicated to assisting you with any questions or issues related to your orders, products, or website experience. From tracking your delivery to understanding product care, we are here to ensure your Eaude Furniture experience is smooth and satisfying. Please have your order number ready for faster service when contacting us about a specific purchase.</p>
+                <p>We understand that sometimes issues can arise, and our aim is to resolve them efficiently and effectively. Our team is trained to handle a wide range of inquiries, including:</p>
+                <ul>
+                    <li>Order status and tracking information</li>
+                    <li>Product assembly instructions and guides</li>
+                    <li>Warranty claims and repairs</li>
+                    <li>Returns, exchanges, and refunds</li>
+                    <li>Product care and maintenance advice</li>
+                    <li>Technical support for website issues</li>
+                    <li>General product information and specifications</li>
+                </ul>
+                <p>For the quickest resolution, we recommend checking our comprehensive FAQ section first, as many common questions are answered there. If you cannot find the information you need, please do not hesitate to reach out to our dedicated customer support team. We are committed to providing you with the best possible service and ensuring your complete satisfaction with your Eaude Furniture products.</p>
+                <p><strong>Customer Support Email:</strong> <a href="mailto:support@eaudefurniture.com">support@eaudefurniture.com</a></p>
+                <p><strong>Customer Support Phone:</strong> <a href="tel:+919876543210">+91 98765 43210</a> (Select option for Customer Support)</p>
+
+                <h2>Sales & Design Consultations</h2>
+                <p>Are you an architect, interior designer, or a private client looking to furnish a luxury space? Our sales and design consultation team is ready to assist you. We offer personalized guidance to help you select the perfect pieces from our collections or to embark on a custom bespoke furniture project. Schedule a virtual or in-person consultation to discuss your vision, material preferences, and spatial requirements.</p>
+                <p>Our design consultants possess deep expertise in modern aesthetics and material science. They can provide:</p>
+                <ul>
+                    <li>Detailed product information and recommendations tailored to your project.</li>
+                    <li>Guidance on material selection, finishes, and customization options for bespoke pieces.</li>
+                    <li>Assistance with spatial planning and furniture layout.</li>
+                    <li>Information on bulk orders and trade programs for professionals.</li>
+                    <li>Virtual room visualization sessions to help you envision Eaude pieces in your space.</li>
+                </ul>
+                <p>We believe that the right furniture can transform a space, and our consultants are dedicated to helping you achieve your design aspirations. From initial concept to final execution, we are your partners in creating truly exceptional interiors.</p>
+                <p><strong>Sales & Design Email:</strong> <a href="mailto:design@eaudefurniture.com">design@eaudefurniture.com</a></p>
+                <p><strong>Book a Consultation:</strong> Use our online booking tool (link to be added) or call us directly.</p>
+
+                <h2>Media & Press Inquiries</h2>
+                <p>For journalists, media professionals, and press-related inquiries, please contact our public relations department. We are happy to provide information, high-resolution images, and arrange interviews with our design team or leadership.</p>
+                <p>Our media team can assist with:</p>
+                <ul>
+                    <li>Press releases and media kits.</li>
+                    <li>High-resolution product and lifestyle photography.</li>
+                    <li>Interviews with Eaude Furniture designers and executives.</li>
+                    <li>Information on upcoming collections, events, and brand initiatives.</li>
+                    <li>Partnership opportunities for editorial features and collaborations.</li>
+                </ul>
+                <p>We value our relationships with the media and are committed to providing timely and accurate information for your stories and features. Please direct all media-specific inquiries to the email below to ensure a prompt response from our communications team.</p>
+                <p><strong>Media Relations Email:</strong> <a href="mailto:press@eaudefurniture.com">press@eaudefurniture.com</a></p>
+
+                <h2>Careers at Eaude Furniture</h2>
+                <p>Are you passionate about modern design, quality craftsmanship, and exceptional customer service? Eaude Furniture is a growing company always looking for talented individuals to join our team. Explore career opportunities in design, manufacturing, sales, marketing, and administration.</p>
+                <p>We offer a dynamic and collaborative work environment where innovation and creativity are highly valued. If you are interested in contributing to a brand that defines the essence of modern living, we encourage you to visit our careers page for current openings or submit your resume for future consideration.</p>
+                <p><strong>Careers Email:</strong> <a href="mailto:careers@eaudefurniture.com">careers@eaudefurniture.com</a></p>
+                <p><strong>View Current Openings:</strong> [Link to Careers Page - e.g., careers.html]</p>
+
+                <h2>Feedback & Suggestions</h2>
+                <p>Your insights are invaluable to us. At Eaude Furniture, we are continuously striving to enhance our products and services, and your feedback plays a crucial role in this process. Whether you have a suggestion for a new product, an idea for improving our website, or a comment about your recent experience, we welcome your input. We believe in continuous improvement and are always listening to our customers to better serve their needs.</p>
+                <p>Please share your thoughts, ideas, or constructive criticism. We review all feedback carefully and use it to inform our decisions and future developments. Your contribution helps us maintain our commitment to excellence and innovation in modern furniture design.</p>
+                <p><strong>Feedback Email:</strong> <a href="mailto:feedback@eaudefurniture.com">feedback@eaudefurniture.com</a></p>
+
+                <h2>Social Media</h2>
+                <p>Connect with Eaude Furniture on our social media channels to stay updated on our latest collections, design inspirations, events, and behind-the-scenes glimpses of our craftsmanship. Join our community of design enthusiasts and engage with us directly.</p>
+                <ul>
+                    <li><a href="https://www.instagram.com/eaudefurniture" target="_blank">Instagram</a>: Discover visual inspiration and new product launches.</li>
+                    <li><a href="https://www.pinterest.com/eaudefurniture" target="_blank">Pinterest</a>: Explore curated boards of modern interiors and design trends.</li>
+                    <li><a href="https://www.facebook.com/eaudefurniture" target="_blank">Facebook</a>: Follow us for updates, news, and community discussions.</li>
+                    <li><a href="https://www.linkedin.com/company/eaudefurniture" target="_blank">LinkedIn</a>: Connect with us professionally and explore career opportunities.</li>
+                </ul>
+                <p>We love seeing how Eaude Furniture pieces transform your spaces! Tag us in your photos and share your #EaudeFurniture moments.</p>
+
+                <h2>Operating Hours</h2>
+                <p>Our customer service and design consultation teams are available to assist you during the following hours:</p>
+                <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM IST (Indian Standard Time)</p>
+                <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM IST</p>
+                <p><strong>Sunday:</strong> Closed</p>
+                <p>Public holidays may affect these hours. Please check our website for any specific holiday announcements. While our online shop is accessible 24/7, responses to inquiries outside of operating hours will be addressed on the next business day. We appreciate your patience and understanding.</p>
+
+                <h2>Our Showroom / Physical Location</h2>
+                <p>While our primary mode of operation is online, we understand the desire to experience the quality and design of Eaude Furniture firsthand. We are currently developing plans for a flagship showroom where you can immerse yourself in the essence of modern living and interact directly with our collections and design consultants. Details regarding our showroom opening, including location and appointment booking, will be announced on our website and social media channels as soon as they are available. Until then, our virtual tools, such as the Room Visualizer and Material Swatch Selector, offer an excellent way to experience our products.</p>
+                <p>For now, our administrative office address is:</p>
+                <p><strong>Eaude Furniture Headquarters</strong><br>
+                123 Modern Living Avenue<br>
+                Design District<br>
+                New Delhi, Delhi, India<br>
+                Pin Code: 110001</p>
+                <p>Please note that this is an administrative office and not a walk-in showroom. Appointments are required for any in-person meetings at this location.</p>
+
+                <h2>Online Contact Form</h2>
+                <p>For your convenience, you may also use our online contact form below to send us a message directly from our website. This form is designed to capture all necessary details to ensure your inquiry is handled efficiently. Please provide as much information as possible regarding your query, including relevant order numbers if applicable, to help us provide you with the most accurate and timely response.</p>
+                <p>Our online contact form allows you to select the nature of your inquiry (e.g., General Question, Customer Support, Design Consultation, Media Inquiry) which helps us route your message to the correct department immediately. We aim to respond to all form submissions within 24-48 business hours. Your patience is appreciated as we ensure every message receives the attention it deserves.</p>
+                <p><em>[Note: A functional contact form would typically be implemented here using backend processing. This HTML serves as a placeholder for the descriptive text about the form.]</em></p>
+
+                <h2>Our Commitment to You</h2>
+                <p>At Eaude Furniture, every interaction is an opportunity to reinforce our commitment to excellence and customer satisfaction. We are dedicated to providing you with not only beautifully designed furniture but also a supportive and responsive customer experience. We value your trust and strive to build lasting relationships with our clients. Your feedback drives our innovation, and your satisfaction is our ultimate reward. Thank you for choosing Eaude Furniture.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+                <li><a href="cookies.html">Cookie Policy</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2025 Eaude Furniture. All rights reserved.</p>
+        <p><strong>Address:</strong> 123 Modern Living Avenue, Design District, New Delhi, Delhi, India</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Email:</strong> info@eaudefurniture.com</p>
+    </footer>
+</body>
+</html>
